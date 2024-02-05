@@ -1,0 +1,101 @@
+/* Smartphones ----------- */
+@media only screen and (max-width: 760px) {
+    #isMobile { display: none; }
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .slider-text-top{
+        letter-spacing: -10px;
+        font-size: 140px;
+        margin-bottom: 0px;
+        line-height: 100px;
+    }
+    .head-h3{
+        font-size: 34px;
+    }
+    .head-subtitle{
+        font-size: 100px;
+        letter-spacing: -5px;
+    }
+    .team-mem-wrap {
+        margin-bottom: 0;
+    }
+    .blog-page-post-author{
+        display: inline-block;
+    }
+    .blog-page-post-date {
+        display: inline-block;
+        float: right;
+        text-align: right;
+        margin-right: 20px;
+    }
+    .children{
+        list-style: none;
+        padding-left: 40px;
+    }
+    .post-navigation .nav-previous{
+        width: 50%;
+        float: left;
+    }
+    .post-navigation .nav-next{
+        width: 50%;
+        float: right;
+        text-align: right;
+    }
+    .hero-slider-content .text-top{
+        font-size: 140px;
+        letter-spacing: -10px;
+        line-height: 100px; 
+    }
+    .hero-slider-content .text-mid{
+        font-size: 50px;
+    }
+    .subscribe-button {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        bottom: 5px;
+        display: block;
+        width: 160px;
+        font-size: 11px;
+        color:rgb(255, 255, 255);
+        border-radius: 3px;
+        background-color: #242424;
+        -webkit-transition: background-color 300ms ease;
+        transition: background-color 300ms ease;
+        font-size: 11px;
+        font-weight: 400;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        padding: 9px 15px;
+        border: 0;
+    }
+}
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+    .animated {
+        /*CSS transitions*/
+        -o-transition-property: none !important;
+        -moz-transition-property: none !important;
+        -ms-transition-property: none !important;
+        -webkit-transition-property: none !important;
+        transition-property: none !important;
+        /*CSS transforms*/
+        -o-transform: none !important;
+        -moz-transform: none !important;
+        -ms-transform: none !important;
+        -webkit-transform: none !important;
+        transform: none !important;
+        /*CSS animations*/
+        -webkit-animation: none !important;
+        -moz-animation: none !important;
+        -o-animation: none !important;
+        -ms-animation: none !important;
+        animation: none !important;
+        /*show*/
+        opacity: 1;
+    }
+}

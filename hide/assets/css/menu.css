@@ -1,0 +1,295 @@
+/*
+ * 17. NAVIGATION
+ */
+/* first mobile */
+@-webkit-keyframes menu-fixed-animation {
+    0% {
+        transform: translate(0,-60px);  
+    }
+    100% {
+        transform: translate(0,0px); 
+    }
+}
+@keyframes menu-fixed-animation {
+    0% {
+        transform: translate(0,-60px);  
+    }
+    100% {
+        transform: translate(0,0px); 
+    }
+}
+@-webkit-keyframes menu-animation {
+    0% {
+        padding-top:0;
+        padding-bottom:0;
+    }
+    100% {
+        padding-top:30px;
+        padding-bottom:30px;
+    }
+}
+@keyframes menu-animation {
+    0% {
+        padding-top:0;
+        padding-bottom:0;
+    }
+    100% {
+        padding-top:30px;
+        padding-bottom:30px;
+    }
+}
+.nav-back{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: hsla(0, 0%, 100%, .93);
+    z-index: 1000;
+}
+.nav-back.inverse{
+    background-color: rgba(0,0,0,.8);
+}
+.nav-back.fixed{
+    padding-top: 0;
+    padding-bottom: 0;
+    position: fixed;
+    top: 0;
+}
+.hedone-menu-container{
+    float: none;
+    position: relative;
+    display: none;
+    background-color: #000;
+}
+.hedone-menu-container.open{
+    display: block;
+}
+.hedone-menu-header:after{
+    clear: both;
+    display: table;
+    content: ' ';
+    box-sizing: border-box;
+}
+.nav-back .hedone-menu-container{
+    top:30px;
+}
+.nav-back.fixed .hedone-menu-container{
+    top:0px;
+}
+/* 
+ * BRAND LOGO 
+ */
+.site-branding{
+    position: relative;
+    float: left;
+    padding-left: 10px;
+}
+.site-branding img{
+    width: 195px;
+    height: auto;
+    padding-top: 10px
+}
+.fixed .site-branding img{
+    width: 148px;
+}
+.site-branding a {
+    display: block;
+    text-decoration: none;
+    color: #333333;
+}
+
+
+/* all screens */
+.says, .screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    overflow: hidden;
+    position: absolute !important;
+    width: 1px;
+    word-wrap: normal !important;
+}
+.navbar {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 0;
+    border: none;
+    margin: 0 -15px;
+}
+/* all sub-menu */
+ul.hedone-menu ul.sub-menu {
+    padding-left: 10px;
+    list-style-type: none;
+    display: none;
+    -webkit-transition: all 750ms ease;
+    transition: all 750ms ease;
+}
+
+ul.hedone-menu ul.sub-menu.open {
+    display: block;
+}
+ul.hedone-menu{
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+ul.hedone-menu > li{
+    position: relative;
+}
+ul.hedone-menu a{
+    display: block;
+    padding: 12px 15px;
+}
+ul.hedone-menu a i {
+    cursor: pointer;
+    margin: 0 0 0 15px;
+    font-size: 16px;
+    float: right;
+}
+ul.hedone-menu li a {
+    font-family: Lato, sans-serif;
+    font-size: 11px;
+    line-height: 23px;
+    font-weight: 400;
+    text-align: left;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-indent: 0px;
+    text-transform: uppercase;
+}
+ul.hedone-menu > li > a {
+    border-bottom: 3px solid transparent;
+    -webkit-transition: border 350ms ease, color 350ms ease;
+    transition: border 350ms ease, color 350ms ease;
+    direction: ltr;
+    color: #c4c4c4;
+}
+
+ul.hedone-menu > li > a:hover,
+ul.hedone-menu > li.current-menu-parent > a{
+    border-style: none none solid;
+    border-width: 3px;
+    border-color: rgba(0, 0, 0, .1);
+    -webkit-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    transform: translate(0px, 0px);
+}
+ul.hedone-menu > li > ul.sub-menu li a{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: rgba(0, 0, 0, .93);
+    -webkit-transition: all 350ms ease;
+    transition: all 350ms ease;
+    color: #c4c4c4;
+    letter-spacing: 1px;
+}
+ul.hedone-menu > li > ul.sub-menu li a:hover{
+    color: #fff;
+}
+/* nav button */
+.nav-button i{
+    font-size: 16px;
+    line-height: 3px;
+}
+.nav-button {
+    position: relative;
+    float: right;
+    padding: 22px;
+    line-height: 0;
+    display: block;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    tap-highlight-color: rgba(0,0,0,0);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-transition: background-color 300ms ease, color 300ms ease;
+    transition: background-color 300ms ease, color 300ms ease;
+}
+.nav-button.open {
+    background-color: #C8C8C8;
+    color: white;
+}
+.nav-button:hover {
+    background-color: #1f1f1f;
+    color: #fff;
+}
+.navbar-right{
+    overflow-y: auto;
+    max-height: 360px;
+}
+
+/*
+ * menu break point default 1200px
+ */
+@media only screen and  (max-width: 1200px) and (min-width: 0px),(min-width: 768px) {
+    .navbar-right{
+        float: none !important;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .nav-button{
+        display: none;
+    }
+    .nav-back{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        background-color: hsla(0, 0%, 100%, .93);
+        z-index: 1000;
+    }
+    ul.hedone-menu a i {
+        float: none;
+    }
+    .navbar-right{
+        overflow-y: visible;
+        float: right!important;
+    }
+    .nav-back .hedone-menu-container,
+    .nav-back.fixed .hedone-menu-container{
+        top: 0;
+    }
+    .hedone-menu-container{
+        margin-right: -15px;
+        display: block;
+        background-color: transparent;
+    }
+    .hedone-menu-header{
+        float: left;
+    }
+    ul.hedone-menu > li > a {
+        color: #3d3d3d;
+    }
+    .inverse ul.hedone-menu > li > a {
+        color: #cacaca;
+    }
+    .site-branding{
+        padding-left: 0;
+    }
+    /* desktop */
+    ul.hedone-menu > li{
+        display: inline-block;
+    }
+    ul.hedone-menu > li > a{
+
+    }
+    ul.hedone-menu > li > ul.sub-menu{
+        position: absolute;
+        min-width: 220px;
+        left:0;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        background-color: rgba(0, 0, 0, .93);
+        -webkit-transition: all 350ms ease;
+        transition: all 350ms ease;
+    }
+    ul.hedone-menu > li > ul.sub-menu > li ul.sub-menu{
+        padding-left: 10px;
+    }
+}
+

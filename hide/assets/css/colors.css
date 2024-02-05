@@ -1,0 +1,200 @@
+/*
+ * @main-color: #fcc900;
+ */
+ 
+#royal_preloader.royal_preloader_progress .royal_preloader_meter,
+.slider-line{
+    background-color: #fcc900;
+}
+.quote{
+    border-color: #fcc900;
+}
+.facts-name{
+    color: #fcc900;
+}
+.hover-for-team-social ul li a:hover{
+    background-color: #fcc900;
+}
+.service-icon{
+    color: #fcc900;
+}
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+    background: #fcc900;
+}
+.owl-theme .owl-dots .owl-dot span {
+    background: #989898;
+}
+ul.portfolio-filter li a.current,
+ul.portfolio-filter li a:hover {
+    color: #fcc900;
+}
+.portfolio-mask-subtitle {
+    background-color: rgba(252, 201, 0, .9);
+}
+.blog-page-post-head-h2 a:hover{
+    color: #fcc900;
+}
+.blog-page-post-author a{
+    color: #fcc900;
+}
+.subscribe-style:active {
+    border-color: #fcc900;
+}
+
+.subscribe-style:focus {
+    border-color: #fcc900;
+}
+.subscribe-button:hover {
+    background-color: #fcc900;
+}
+.blog_post_category li i.fa,
+.blog_post_tags li i.fa,
+.blog-post-single-footer span.cat-links i.fa,
+.blog-post-single-footer span.tags-links i.fa{
+    color: #fcc900;
+}
+.blog_post_category li a:hover,
+.blog_post_tags li a:hover,
+.blog-post-single-footer .cat-links a:hover,
+.blog-post-single-footer .tags-links a:hover,
+.blog-post-single-meta a:hover{
+    color: #fcc900;
+}
+ul.hedone-menu > li > a:hover,
+ul.hedone-menu > li.current-menu-parent > a{
+    color: #fcc900;
+}
+ul.hedone-menu > li > ul.sub-menu li.current-menu-item > a{
+    color: #fcc900;
+}
+ul.hedone-menu > li.current-menu-item > a{
+    color: #fcc900;
+}
+@media only screen and (max-width: 1199px) {
+    ul.hedone-menu > li > a:hover {
+        color: #fff;
+    }
+    ul.hedone-menu > li.current-menu-parent > a:hover,
+    ul.hedone-menu > li > ul.sub-menu li.current-menu-item > a:hover{
+        color: #fcc900;
+    }
+    
+}
+/*
+ * hero slider
+ */
+.hero-slider .owl-theme .owl-next:hover,
+.hero-slider .owl-theme .owl-prev:hover,
+.project-slider.owl-theme .owl-next:hover,
+.project-slider.owl-theme .owl-prev:hover{
+    background-color: #fcc900;
+    color: #fff;
+}
+.hero-slider .owl-theme .owl-next:hover.disabled,
+.hero-slider .owl-theme .owl-prev:hover.disabled,
+.project-slider.owl-theme .owl-next:hover.disabled,
+.project-slider.owl-theme .owl-prev:hover.disabled{
+    background-color: #fff;
+    color: #000;
+}
+/*
+ * hero video
+ */
+.jquery-background-video-pauseplay.play:before {
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 15px solid #fcc900;
+}
+.jquery-background-video-pauseplay.pause:before,
+.jquery-background-video-pauseplay.pause:after {
+    border-top: 10px solid #fcc900;
+    border-bottom: 10px solid #fcc900;
+    border-left: 5px solid #fcc900;
+}
+/*
+ * nav-pills
+ */
+.nav-pills > li > a:hover,
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus{
+    background-color: #fcc900;
+    color: #fff;
+}
+/*
+ * pricing box
+ */
+a:hover.pricing-button{
+    color: #fff;
+    background-color: #fcc900;
+}
+/*
+ * contact form
+ */
+.contact-button:hover,
+.contact-button:focus{
+    background-color: #fcc900;
+    color: #fff;
+    outline: none;
+}
+.text-field:focus {
+    border-bottom-color: #fcc900;
+}
+
+/* map */
+.lightbox-map:hover {
+    background-color: #fcc900;
+}
+
+/* buttons */
+.btn-default-main-color:hover,
+.btn-default-main-color:active,
+.btn-default-main-color:focus{
+    border-color: #fcc900;
+    background-color: #fcc900;
+    color: #fff;
+}
+.hover-zoom-in-white:hover{
+    color: #fcc900;
+}
+.btn-default-main-color-border-solid:hover{
+    border-color: #fcc900;
+    background-color: #fcc900;
+}
+.btn-default-main-color-border-dashed:hover{
+    border-color: #fcc900;
+    background-color: #fcc900;
+}
+
+/* dropcaps */
+.dropcap.main-color{
+    background-color: #fcc900;
+    color: #fff;
+}
+/* highlights */
+.highlights-main-color{
+    background-color: #fcc900;
+    color: #fff;
+}
+/* gallery */
+.gallery a:hover:before{
+    background-color: rgba(252, 201, 0, .8);/* color: #fcc900 with tranparent*/
+}
+
+/* single post */
+.post-wrap-section{
+    border-top-color: #fcc900;
+}
+.comment-metadata a:hover,
+.comment-author a:hover{
+    color: #fcc900;
+}
+.comment-form input[type="text"]:focus,
+.comment-form input[type="email"]:focus,
+.comment-form textarea:focus{
+    border-bottom-color: #fcc900;
+}
+.post-navigation a:hover{
+    color: #fcc900;
+}
