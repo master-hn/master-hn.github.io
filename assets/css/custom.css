@@ -1,0 +1,24 @@
+div.pre-header{
+    background-color: rgb(65, 65, 65);
+}
+div.pre-header-fakenav{
+    margin-left: auto;
+    margin-right: 0;
+    width: fit-content!important;
+}
+.pre-header-link {
+    display: inline-block;
+    padding-right: 20px;
+    font-size: 11px;
+    font-family: "Lato", sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #c7c7c7;
+    
+
+}
+.pre-header-link:hover{
+    color: white;
+    text-decoration: none;
+}
