@@ -35,3 +35,7 @@ div.pre-header-fakenav{
     background-image: url(../img/accueil/signature.png);
     background-size: auto;
 }
+
+.owl-next , .owl-prev{
+    display:none !important;
+}
