@@ -56,3 +56,23 @@ button.btn-defilement {
     padding: 10px; /* Ajoute un peu d'espace autour du texte */
     margin-bottom: 10px; /* Ajoute un peu d'espace en dessous du bouton */
 }
+.pointer-svg {
+    cursor: pointer !important;
+}
+
+.custom-popover {
+    position: absolute;
+    border: 1px solid #ccc;
+    background-color: white;
+    border-radius: 3px;
+    padding: 10px;
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    z-index: 1060;
+}
+
+.custom-popover-content {
+    font-size: 14px;
+    color: #333;
+}
+
+
