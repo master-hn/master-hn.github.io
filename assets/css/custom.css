@@ -39,29 +39,20 @@ div.pre-header-fakenav{
 .owl-next , .owl-prev{
     display:none !important;
 }
-.container-frise-cours{
-    overflow-x: hidden;
-}
-.frise-cours {
+.container-frise-cours {
     overflow-x: hidden; /* Cache le débordement horizontal */
     display: flex; /* Assure que le contenu est sur une seule ligne */
     align-items: center; /* Centre verticalement le contenu si nécessaire */
-  }
-  
-  img.frise-cours {
+    max-width: 100%; /* Limite la largeur du conteneur */
+    margin: 20px 0; /* Ajoute un peu d'espace autour du conteneur */
+}
+.frise-cours {
     transition: transform 0.5s ease-in-out; /* Animation fluide pour le défilement */
-  }
-  
-  img.frise-cours:hover {
-    animation: scrollImage 10s linear infinite; /* Changez la durée pour contrôler la vitesse */
-  }
-  
-  @keyframes scrollImage {
-    0% {
-      transform: translateX(0); /* Commence à la position initiale */
-    }
-    100% {
-      transform: translateX(-100%); /* Défile jusqu'à la fin de l'image */
-    }
-  }
-  
+    display: block; /* Assure que l'image n'a pas d'espace supplémentaire en dessous */
+    max-width: none; /* S'assure que l'image peut dépasser la largeur de son conteneur */
+}
+button.btn-defilement {
+    cursor: pointer; /* Change le curseur pour indiquer une action */
+    padding: 10px; /* Ajoute un peu d'espace autour du texte */
+    margin-bottom: 10px; /* Ajoute un peu d'espace en dessous du bouton */
+}
