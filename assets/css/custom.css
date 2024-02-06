@@ -39,3 +39,29 @@ div.pre-header-fakenav{
 .owl-next , .owl-prev{
     display:none !important;
 }
+.container-frise-cours{
+    overflow-x: hidden;
+}
+.frise-cours {
+    overflow-x: hidden; /* Cache le débordement horizontal */
+    display: flex; /* Assure que le contenu est sur une seule ligne */
+    align-items: center; /* Centre verticalement le contenu si nécessaire */
+  }
+  
+  img.frise-cours {
+    transition: transform 0.5s ease-in-out; /* Animation fluide pour le défilement */
+  }
+  
+  img.frise-cours:hover {
+    animation: scrollImage 10s linear infinite; /* Changez la durée pour contrôler la vitesse */
+  }
+  
+  @keyframes scrollImage {
+    0% {
+      transform: translateX(0); /* Commence à la position initiale */
+    }
+    100% {
+      transform: translateX(-100%); /* Défile jusqu'à la fin de l'image */
+    }
+  }
+  
