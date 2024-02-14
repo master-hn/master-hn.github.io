@@ -285,3 +285,9 @@ div.overlay-hide-CTA * {
 ul.list-arrow{
     list-style-type: "➝  ";
 }
+.label-main {
+    margin-right: 5px;
+}
+.opacity-05 {
+    opacity: 0.5;
+}

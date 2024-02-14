@@ -1,26 +1,50 @@
 $(document).ready(function() {
     const options = {
         includeScore: true,
-        // Spécifiez les clés à inclure dans la recherche
-        keys: ['question', 'answer']
+        keys: [
+            'question', 
+            'answer',
+            { name: 'tags', weight: 0.5 }
+        ]
     };
     const fuse = new Fuse(faqData, options);
+    // Collecter tous les tags uniques
+    let allTags = [];
+    faqData.forEach(faq => {
+        if (faq.tags) {
+            allTags = [...allTags, ...faq.tags];
+        }
+    });
+    allTags = [...new Set(allTags)]; // Filtrer les doublons
 
-    // Fonction pour afficher toutes les questions
+    // Générer HTML pour les tags
+    const tagsContainer = $('<div id="tagsContainer" class="tags-container"></div>');
+    allTags.forEach(tag => {
+        const tagSpan = $(`<span class="label label-main pointer-svg" data-tag="${tag}" onclick="filterByTag('${tag}')">${tag}</span> `);
+        tagsContainer.append(tagSpan);
+    });
+
+    // Ajouter les tags en dessous de la barre de recherche
+    $('#searchInput').after(tagsContainer);
+
     function displayFAQs(faqs) {
         const accordion = $('#faqAccordion');
-        accordion.empty(); // Nettoie l'accordéon avant d'ajouter des éléments
+        accordion.empty();
 
         faqs.forEach((faq, index) => {
+            let tagsHtml = '';
+            if (faq.item.tags && faq.item.tags.length > 0) {
+                faq.item.tags.forEach(tag => {
+                    tagsHtml += `<span class="label label-main pointer-svg" data-tag="${tag}" onclick="window.filterByTag('${tag}')">${tag}</span> `;
+                });
+            }
+
             const panel = `
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#faqAccordion" href="#collapse${index}">${faq.item.question}</a>
-                        </h4>
-                    </div>
-                    <div id="collapse${index}" class="panel-collapse collapse">
-                        <div class="panel-body">${faq.item.answer}</div>
+                <div role="button" class="panel btn btn-block btn-default" data-toggle="collapse" data-parent="#faqAccordion" href="#collapse${index}">${faq.item.question}</div>
+                <div id="collapse${index}" class="panel-collapse collapse white-background">
+                    <div class="panel-body">
+                        ${faq.item.answer}
+                        <div class="faq-tags">${tagsHtml}</div>
                     </div>
                 </div>
             `;
@@ -28,25 +52,31 @@ $(document).ready(function() {
         });
     }
 
-    // Affiche toutes les FAQs par défaut
-    displayFAQs(faqData.map((item, index) => ({ item, score: 1, refIndex: index })));
+    displayFAQs(faqData.map((item, index) => ({ item: item, score: 1, refIndex: index })));
 
-    // Gestion de la recherche
+    window.filterByTag = function(tag) {
+        // Masquer tous les tags sauf celui sélectionné
+        $('#tagsContainer .label').each(function() {
+            if ($(this).data('tag') !== tag) {
+                $(this).addClass('opacity-05');
+            } else {
+                $(this).removeClass('opacity-05');
+            }
+        });
+
+        const result = fuse.search(tag);
+        displayFAQs(result);
+    };
+
     $('#searchInput').on('keyup', function() {
         const searchTerm = $(this).val();
         if (searchTerm.length > 0) {
             const result = fuse.search(searchTerm);
             displayFAQs(result);
         } else {
-            // Si le champ de recherche est vide, affichez toutes les FAQs
-            displayFAQs(faqData.map((item, index) => ({ item, score: 1, refIndex: index })));
+            displayFAQs(faqData.map((item, index) => ({ item: item, score: 1, refIndex: index })));
         }
-    });
-    // Exemple de réinitialisation manuelle (non recommandé comme première approche)
-    $('#faqAccordion .panel-heading a').click(function(e) {
-        var jqEl = $(this);
-        if (!jqEl.hasClass('collapsed')) {
-            jqEl.closest('.panel').find('.panel-collapse').collapse('show');
-        }
+        // Réinitialiser la visibilité de tous les tags lors d'une nouvelle recherche ou réinitialisation
+        $('#tagsContainer .label').removeClass('opacity-05');
     });
 });
