@@ -79,4 +79,36 @@ $(document).ready(function() {
         // Réinitialiser la visibilité de tous les tags lors d'une nouvelle recherche ou réinitialisation
         $('#tagsContainer .label').removeClass('opacity-05');
     });
+    function displayLimitedFAQs(faqs) {
+        const accordion = $('#limitedFAQ'); // Cibler le conteneur #limitedFAQ
+        accordion.empty(); // Nettoyer l'accordéon avant d'ajouter des éléments
+    
+        // Limiter l'affichage aux 5 premières FAQs
+        faqs.slice(0, 5).forEach((faq, index) => {
+            let tagsHtml = '';
+            if (faq.item.tags && faq.item.tags.length > 0) {
+                faq.item.tags.forEach(tag => {
+                    tagsHtml += `<span class="label label-main pointer-svg" onclick="window.filterByTag('${tag}')">${tag}</span> `;
+                });
+            }
+    
+            const panel = `
+                <div role="button" class="panel btn btn-block btn-default" data-toggle="collapse" data-parent="#limitedFAQ" href="#collapseLimited${index}">${faq.item.question}</div>
+                <div id="collapseLimited${index}" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        ${faq.item.answer}
+                        <div class="faq-tags">${tagsHtml}</div>
+                    </div>
+                </div>
+            `;
+            accordion.append(panel);
+        });
+    }
+    $(document).ready(function() {
+        // Votre code existant ici...
+    
+        // Appeler displayLimitedFAQs pour afficher les 5 premières FAQs
+        displayLimitedFAQs(faqData.map((item, index) => ({ item: item, score: 1, refIndex: index })));
+    });
+    
 });

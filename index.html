@@ -576,7 +576,28 @@
                 </div>
             </div>
         </section>
-
+        <!-- FAQ Limited -->
+        <section id="FAQ" class="padding-top-bottom-120px" style="min-height:50vh; height:100%">
+            <div class="container">
+                <div class="row">
+                    <div class="animatedParent animateOnce">
+                        <h3 class="head-h3">Foire aux Questions</h3>
+                        <p class="head-subtitle">FAQ</p>
+                    </div>
+                </div>
+                <div id="accordion" class="overlay-container" style="position: relative">
+                    <div id="limitedFAQ">
+                        <!-- Les accordéons de FAQ seront injectés ici -->
+                    </div>
+                    <div class="overlay-hide-FAQ hover-btn-rotate">
+                        <div>
+                            <a target="_blank" href="faq.html" class="btn btn-default-main-color btn-block">Consulter la FAQ</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
 
         <!-- FOOTER -->
         <footer class="footer">
@@ -700,5 +721,9 @@
                 });
             });
         </script>
+        <!-- FUSE.JS -->
+        <script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js"></script>
+        <script src="faq/data.js"></script>
+        <script src="faq/search.js"></script>
     </body>
 </html>

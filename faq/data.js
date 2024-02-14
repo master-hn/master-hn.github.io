@@ -57,5 +57,5 @@ const faqData = [
         question: "Stage : Combien d'heures obligatoires ?",
         answer: "Le stage est obligatoire, d'une durée minimale de 300 heures, ses objectifs et missions devront être en lien avec les pôles de spécialisation du master : ingénierie des savoirs, médiation numérique culturelle ou e-santé. Il peut être effectué dans le cadre d'un emploi sous réserve d'acceptation de l'employeur. Il peut également être substitué dans le cadre du dispositif Étudiant-Entrepreneur, sous réserve d'acceptation de Pépite.",
         tags : ["examens", "stage/alt"]
-    },
+    }
 ];
