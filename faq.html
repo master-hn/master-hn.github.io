@@ -166,9 +166,8 @@
             <div class="container">
                 <div class="row">
                     <div class="footer-logo">
-                        <img src="assets/img/logo-white.png" alt="footer logo"/>
                     </div>
-                    <div class="footer-social-block">
+                    <!-- <div class="footer-social-block">
                         <a href="#" class="w-inline-block social-wrap">
                             <i class="fa fa-twitter"></i>
                         </a>
@@ -181,14 +180,27 @@
                         <a href="#" class="w-inline-block social-wrap">
                             <i class="fa fa-youtube"></i>
                         </a>
-                    </div>
+                    </div> -->
                     <div class="footer-text">
-                        © We are <span class="footer-text-span">Hedone</span>. All rights reserved. 2017<br>Made by <span class="footer-text-span">IG Design</span> in Kraljevo, Serbia
+                        © Équipe pédagogique du <span class="footer-text-span">Master Humanités Numériques</span>,
+                        <br>au sein de l'<a href="https://itic.univ-montp3.fr/" target="_blank" class="footer-text-span">ITIC</a> à l'<a href="https://univ-montp3.fr/" class="footer-text-span">Université Paul Valéry Montpellier 3</a>.
+                        <br>Tous droits réservés. <span class="year_footer"></span>
+                        <br><br>Conçu par Axelle Abbadie avec l'aide de François Perea et Lucie Alidières.
                     </div>
+                    <!-- Année footer dynamique -->
+                    <script>
+                        // Sélectionne l'élément span avec la classe "year_footer"
+                        var yearFooter = document.querySelector('span.year_footer');
+                        // Crée un nouvel objet Date contenant la date actuelle
+                        var currentDate = new Date();
+                        // Obtient l'année actuelle à partir de l'objet Date
+                        var currentYear = currentDate.getFullYear();
+                        // Met à jour le contenu textuel de l'élément span avec l'année actuelle
+                        yearFooter.textContent = currentYear;
+                    </script>
                 </div>
             </div>
         </footer>
-
         
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="assets/js/jquery.js"></script>

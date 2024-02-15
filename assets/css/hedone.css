@@ -1757,13 +1757,18 @@ input.subscribe-style.fullscreen-form:-webkit-autofill {
     padding-bottom: 70px;
     background-color: #1a1a1a;
 }
-.footer-logo img{
+.footer-logo {
     display: block;
-    width: 120px;
+    width: 100px;
+    height: 100px;
     margin: 0px auto 50px;
-    padding: 7px 15px;
-    border-radius: 3px;
+    padding: none;
+    border-radius: 100px;
     background-color: #fcc900;
+    background-image: url('/assets/img/logo-white.png');
+    background-size: 78px;
+    background-position: 50% 80%;
+    background-repeat: no-repeat;
 }
 .footer-social-block {
     position: relative;
