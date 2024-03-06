@@ -357,3 +357,6 @@ div.v-align-items {
 div.v-align-items * {
     align-self: center;
 }
+.label-primary {
+    background-color: #000;
+}
