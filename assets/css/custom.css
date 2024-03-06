@@ -331,8 +331,7 @@ a.footer-text-span:hover {
     color:#fcc900
 }
 div.hero-small {
-    max-height: 50vh;
-    min-height: 40vh;
+    padding-top: 20vh;
 }
 li.block-default-main-color-textblack, ul.list-head-main > li > strong{
     font-family: Lato, sans-serif;
@@ -347,4 +346,14 @@ li.block-default-main-color-textblack, ul.list-head-main > li > strong{
 }
 ul.list-head-main li {
     color: #343434;
+}
+div.flex.row {
+    display: flex;
+}
+div.v-align-items {
+    display: flex;
+    align-items: center;
+}
+div.v-align-items * {
+    align-self: center;
 }
