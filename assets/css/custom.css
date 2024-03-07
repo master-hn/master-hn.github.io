@@ -372,3 +372,6 @@ div.v-align-items * {
 .criteres-tableau > div.list-group-item p {
     font-weight: 300;
 }
+div.row.background-main-color {
+    background-color: #fcc900;
+}
