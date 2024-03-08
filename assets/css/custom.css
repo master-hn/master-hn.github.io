@@ -387,3 +387,18 @@ div#tab-2.matieres {
     padding-right: 0px;
     padding-left: 0px;
 }
+
+div.col-left-bordered {
+    border-left: 3px solid #FCC926;
+    margin-left: 5%;
+}
+
+div.row.eq-col {
+    display: table;
+}
+
+div.row.eq-col div {
+    float:none;
+    display:table-cell;
+    vertical-align: middle;
+}
