@@ -4,19 +4,20 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Roboto:wght@300;400;500&display=swap");
 
-* {
+#tab-2 > * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-div.row-swiper {
+section.section-swiper {
   position: relative;
   width: 100%;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(171,102,255,1) 0%, rgba(116,182,247,1) 90% );
   overflow: hidden;
 }
 
