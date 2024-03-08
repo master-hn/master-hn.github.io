@@ -11,7 +11,6 @@ Project Description
 - [ ] professionnel  
 - [ ] pedagogie-avenir  
 - [ ] humanites-numeriques  
-- [ ] contact  
 - [ ] alumni  
 - [ ] a-propos  
 
@@ -20,10 +19,11 @@ Project Description
 
 ### Développement (8h)
 
-- [ ] admission-programme  
 
 ### Terminé ✓
 
+- [x] admission-programme  
 - [x] faq  
 - [x] index  
+- [x] contact  
 
