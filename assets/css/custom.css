@@ -375,3 +375,15 @@ div.v-align-items * {
 div.row.background-main-color {
     background-color: #fcc900;
 }
+span.space{
+    display: inline;
+    width: 10px;
+    height: 1px;
+    background-color: transparent!important;
+    margin: none!important;
+    padding: 0px!important;
+}
+div#tab-2.matieres {
+    padding-right: 0px;
+    padding-left: 0px;
+}
