@@ -696,6 +696,14 @@ blockquote {
     -ms-transform: scale(0.9);
     transform: scale(0.9);
 }
+.hover-zoom-out-white:hover{
+    background-color: #fff !important;
+    color: rgba(0, 0, 0, .8)!important;
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+    border: solid 1px #FCC926!important;
+}
 .hover-zoom-in:hover{
     -webkit-transform: scale(1.1);
     -ms-transform: scale(1.1);
