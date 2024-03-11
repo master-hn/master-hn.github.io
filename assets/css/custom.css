@@ -420,7 +420,12 @@ span.typewriter {
   }
   
   /* The typewriter cursor effect */
-  @keyframes blink-caret {
+@keyframes blink-caret {
     from, to { border-color: transparent }
     50% { border-color: #FCC926; }
-  }
+}
+@media only screen and (max-width: 768px) {
+    .slider-text-mid {
+        font-size: 1.5em; /* Modifier la taille de la police pour les écrans plus petits */
+    }
+}

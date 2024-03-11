@@ -150,34 +150,35 @@
                 </div>
             </div><hr>
         </section>
-<section>
-    <div class="container">
-        <div class="row" style="min-height:240px; display:flex">
-            <h1 class="slider-text-mid" style="align-self:center; line-height: 1em;">Devenir ... <br><span class="typewriter" data-period="2000" data-type='[ "Ingénieur pédagogique", "Médiateur scientifique", "Responsable éditorial numérique", "Ingénieur en Humanités Numériques" ]'><span class="wrap-type"></span></span></h1>
-        </div>
-        <div class="row">
-            <p>
-                Notre pédagogie repose à la fois sur les <strong>contenus des cours</strong>, les <strong>situations d'apprentissage et d'évaluation</strong>, la <strong>promotion sélectionnée</strong> et <strong>votre capacité à développer des compétences en autonomie</strong>.
-            </p>
-            <p>
-                En effet, selon la <a href="https://www.francecompetences.fr/recherche/rncp/34853/" target="_blank">fiche RNCP</a> à laquelle le master est rattaché, ce master vous offre de nombreux débouchés professionnels et académiques. Cependant, ce sont vos appétances qui vont dessiner votre trajectoire de compétences.
-            </p>
-            <h4 class="head-h4">Sélectionnez un métier pour illustrer ce propos.</h4>
-            <div class="row text-center" style="min-height: 5em;">
-                <a id="metier-2" href="#reste-ici" class="btn btn-default hover-zoom-out-white">Ingénieur pédagogique</a>
-                <a id="metier-3" href="#reste-ici" class="btn btn-default hover-zoom-out-white">Médiateur scientifique</a>
-                <a id="metier-4" href="#reste-ici" class="btn btn-default hover-zoom-out-white">Ingénieur Humanités Numériques</a>
-                <a id="metier-1" href="#reste-ici" class="btn btn-default hover-zoom-out-white"><i class="fa fa-refresh" aria-hidden="true"></i></a>
+        <!-- Images conditionnelles trajectoires compétences -->
+        <section>
+            <div class="container-fluid">
+                <div class="row" style="min-height:240px; display:flex">
+                    <h1 class="slider-text-mid" style="align-self:center; line-height: 1em;">Devenir ... <br><span class="typewriter" data-period="2000" data-type='[ "Ingénieur pédagogique", "Médiateur scientifique", "Responsable éditorial numérique", "Ingénieur en Humanités Numériques" ]'><span class="wrap-type"></span></span></h1>
+                </div>
+                <div class="row">
+                    <p>
+                        Notre pédagogie repose à la fois sur les <strong>contenus des cours</strong>, les <strong>situations d'apprentissage et d'évaluation</strong>, la <strong>promotion sélectionnée</strong> et <strong>votre capacité à développer des compétences en autonomie</strong>.
+                    </p>
+                    <p>
+                        En effet, selon la <a href="https://www.francecompetences.fr/recherche/rncp/34853/" target="_blank">fiche RNCP</a> à laquelle le master est rattaché, ce master vous offre de nombreux débouchés professionnels et académiques. Cependant, ce sont vos appétances qui vont dessiner votre trajectoire de compétences.
+                    </p>
+                    <h4 class="head-h4">Sélectionnez un métier pour illustrer ce propos.</h4>
+                    <div class="row text-center" style="min-height: 5em;">
+                        <a id="metier-2" href="#reste-ici" class="btn btn-default hover-zoom-out-white">Ingénieur pédagogique</a>
+                        <a id="metier-3" href="#reste-ici" class="btn btn-default hover-zoom-out-white">Médiateur scientifique</a>
+                        <a id="metier-4" href="#reste-ici" class="btn btn-default hover-zoom-out-white">Ingénieur Humanités Numériques</a>
+                        <a id="metier-1" href="#reste-ici" class="btn btn-default hover-zoom-out-white"><i class="fa fa-refresh" aria-hidden="true"></i></a>
+                    </div>
+                    <div class="metier-container">
+                        <img id="img-metier-1" src="assets/img/metier-1.png" alt="" class="img-responsive metier">
+                        <img id="img-metier-2" src="assets/img/metier-2.png" alt="" class="hidden img-responsive metier">
+                        <img id="img-metier-3" src="assets/img/metier-3.png" alt="" class="hidden img-responsive metier">
+                        <img id="img-metier-4" src="assets/img/metier-4.png" alt="" class="hidden img-responsive metier">
+                    </div>
+                </div>
             </div>
-            <div class="metier-container">
-                <img id="img-metier-1" src="assets/img/metier-1.png" alt="" class="img-responsive metier">
-                <img id="img-metier-2" src="assets/img/metier-2.png" alt="" class="hidden img-responsive metier">
-                <img id="img-metier-3" src="assets/img/metier-3.png" alt="" class="hidden img-responsive metier">
-                <img id="img-metier-4" src="assets/img/metier-4.png" alt="" class="hidden img-responsive metier">
-            </div>
-        </div>
-    </div>
-</section>
+        </section>
         <!-- FOOTER -->
         <footer class="footer">
             <div class="container">
@@ -233,73 +234,63 @@
         <!-- Typewriter effect -->
         <script>
             var TxtType = function(el, toRotate, period) {
-        this.toRotate = toRotate;
-        this.el = el;
-        this.loopNum = 0;
-        this.period = parseInt(period, 10) || 2000;
-        this.txt = '';
-        this.tick();
-        this.isDeleting = false;
-    };
+                this.toRotate = toRotate;
+                this.el = el;
+                this.loopNum = 0;
+                this.period = parseInt(period, 10) || 2000;
+                this.txt = '';
+                this.tick();
+                this.isDeleting = false;
+            };
 
-    TxtType.prototype.tick = function() {
-        var i = this.loopNum % this.toRotate.length;
-        var fullTxt = this.toRotate[i];
+            TxtType.prototype.tick = function() {
+                var i = this.loopNum % this.toRotate.length;
+                var fullTxt = this.toRotate[i];
 
-        if (this.isDeleting) {
-        this.txt = fullTxt.substring(0, this.txt.length - 1);
-        } else {
-        this.txt = fullTxt.substring(0, this.txt.length + 1);
-        }
+                if (this.isDeleting) {
+                this.txt = fullTxt.substring(0, this.txt.length - 1);
+                } else {
+                this.txt = fullTxt.substring(0, this.txt.length + 1);
+                }
 
-        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+                this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
 
-        var that = this;
-        var delta = 200 - Math.random() * 100;
+                var that = this;
+                var delta = 200 - Math.random() * 100;
 
-        if (this.isDeleting) { delta /= 2; }
+                if (this.isDeleting) { delta /= 2; }
 
-        if (!this.isDeleting && this.txt === fullTxt) {
-        delta = this.period;
-        this.isDeleting = true;
-        } else if (this.isDeleting && this.txt === '') {
-        this.isDeleting = false;
-        this.loopNum++;
-        delta = 500;
-        }
+                if (!this.isDeleting && this.txt === fullTxt) {
+                delta = this.period;
+                this.isDeleting = true;
+                } else if (this.isDeleting && this.txt === '') {
+                this.isDeleting = false;
+                this.loopNum++;
+                delta = 500;
+                }
 
-        setTimeout(function() {
-        that.tick();
-        }, delta);
-    };
+                setTimeout(function() {
+                that.tick();
+                }, delta);
+            };
 
-    window.onload = function() {
-        var elements = document.getElementsByClassName('typewriter');
-        for (var i=0; i<elements.length; i++) {
-            var toRotate = elements[i].getAttribute('data-type');
-            var period = elements[i].getAttribute('data-period');
-            if (toRotate) {
-              new TxtType(elements[i], JSON.parse(toRotate), period);
-            }
-        }
-        // INJECT CSS
-        var css = document.createElement("style");
-        css.type = "text/css";
-        css.innerHTML = ".typewriter > .wrap-type { border-right: 0.08em solid #fff}";
-        document.body.appendChild(css);
-    };
+            window.onload = function() {
+                var elements = document.getElementsByClassName('typewriter');
+                for (var i=0; i<elements.length; i++) {
+                    var toRotate = elements[i].getAttribute('data-type');
+                    var period = elements[i].getAttribute('data-period');
+                    if (toRotate) {
+                    new TxtType(elements[i], JSON.parse(toRotate), period);
+                    }
+                }
+                // INJECT CSS
+                var css = document.createElement("style");
+                css.type = "text/css";
+                css.innerHTML = ".typewriter > .wrap-type { border-right: 0.08em solid #fff}";
+                document.body.appendChild(css);
+            };
         </script>
         <!-- Images métier -->
-        <script>
-            $('#myTabs a').click(function (e) {
-            e.preventDefault()
-                $('#myTabs a[href="#img-metier-3"]').tab('show')
-                $('#myTabs a[href="#img-metier-2"]').tab('show')
-                $('#myTabs a[href="#img-metier-1"]').tab('show')
-                $('#myTabs a[href="#img-metier-4"]').tab('show')
-            })
-        </script>
-        <!-- images métier -->
         <script>
         document.addEventListener('DOMContentLoaded', function() {
             var metiers = document.querySelectorAll('.metier');
