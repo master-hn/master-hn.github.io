@@ -453,3 +453,10 @@ div.row p {
         max-width: 1080px;
     }
 }
+section#modalites_pedagogiques div.row.eq-col div {
+    max-width: 960px;
+}
+section#modalites_pedagogiques div.row {
+    margin-right: auto;
+    margin-left: auto;
+}
