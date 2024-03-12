@@ -388,9 +388,13 @@ div#tab-2.matieres {
     padding-left: 0px;
 }
 
-div.col-left-bordered {
+.col-left-bordered {
     border-left: 3px solid #FCC926;
     margin-left: 5%;
+}
+.col-right-bordered {
+    border-right: 3px solid #FCC926;
+    margin-right: 5%;
 }
 /* Colonnes égales */
 div.row.eq-col {
@@ -443,4 +447,9 @@ div.typewriter-row {
 div.row p {
     padding-right: 4%;
     padding-left: 4%
+}
+@media only screen and (min-width: 768px) {
+    .img-1080 {
+        max-width: 1080px;
+    }
 }
