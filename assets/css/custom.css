@@ -460,3 +460,9 @@ section#modalites_pedagogiques div.row {
     margin-right: auto;
     margin-left: auto;
 }
+/* Fix Menu Responsive */
+@media only screen and (min-width: 1200px) {
+    #Hedone > div > ul > li > a {
+        color : #ffffff
+    }
+}
