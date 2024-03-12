@@ -465,8 +465,6 @@ section#modalites_pedagogiques div.row {
     .menu-item-has-children {
     }
     .hedone-menu-container.open div.navbar-right ul li.menu-item a {
-    }
-    ul.hedone-menu > li > a:hover {
         color: #000000
     }
 }
