@@ -3080,7 +3080,6 @@ body.logged-in .YouTubePopUp-Wrap{ /* For WordPress */
     float: none;
     position: relative;
     display: none;
-    background-color: #000;
 }
 .hedone-menu-container.open{
     display: block;
@@ -3276,7 +3275,7 @@ ul.hedone-menu > li > ul.sub-menu li a:hover{
     .hedone-menu-container{
         margin-right: -15px;
         display: block;
-        background-color: transparent;
+        background-color: transparent!important;
     }
     .hedone-menu-header{
         float: left;
