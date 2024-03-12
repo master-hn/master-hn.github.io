@@ -462,7 +462,7 @@ section#modalites_pedagogiques div.row {
 }
 /* Fix Menu Responsive */
 @media only screen and (min-width: 1200px) {
-    #Hedone > div > ul > li > a {
+    .hedone-menu-container.open div.navbar-right ul li.menu-item a {
         color : #ffffff
     }
 }
