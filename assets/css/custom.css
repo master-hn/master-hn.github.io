@@ -462,8 +462,11 @@ section#modalites_pedagogiques div.row {
 }
 /* Fix Menu Responsive */
 @media only screen and (max-width: 1200px) {
-    .hedone-menu-container.open {
+    .menu-item-has-children {
     }
     .hedone-menu-container.open div.navbar-right ul li.menu-item a {
+    }
+    ul.hedone-menu > li > a:hover {
+        color: #000000
     }
 }
