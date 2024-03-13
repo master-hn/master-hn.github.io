@@ -469,3 +469,49 @@ section#modalites_pedagogiques div.row {
         color: #000000
     }
 }
+
+.progress_ove.progress {
+    height: 1.2em;
+    border-radius: 100px;
+}
+span.bold_not_strong {
+    font-weight: 600;
+}
+span.progress_ove_caption {
+    color: #fff;
+    font-size: small;
+    font-weight: 400;
+    position: absolute;
+    left: 5%;
+}
+.progress-bar-graduation {
+    background-color: #ffffff;
+    border-right: 1px solid #ccc;
+    color: #333
+}
+#last-graduation.progress-bar-graduation {
+    border-right: none;
+}
+#graduation_score, #graduation_score .progress-bar {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+#graduated_score {
+    margin-bottom: 0px;
+    border: 1px solid #ccc
+}
+.progress-bar-graduated {
+    background-color: #fff;
+}
+.progress-bar-graduated.graduated_1 {
+    background-color: rgba(92,184,92,0.3);
+}
+.progress-bar-graduated.graduated_2 {
+    background-color: rgba(92,184,92,0.5);
+}
+.progress-bar-graduated.graduated_3 {
+    background-color: rgba(92,184,92,0.7);
+}
+.progress-bar-graduated.graduated_4 {
+    background-color: rgba(92,184,92,0.9);
+}
