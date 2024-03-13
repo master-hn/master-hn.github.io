@@ -515,3 +515,9 @@ span.progress_ove_caption {
 .progress-bar-graduated.graduated_4 {
     background-color: rgba(92,184,92,0.9);
 }
+/* Fix animated opacity 0 responsive */
+@media (max-width: 768px) {
+    .animated.fadeInRight, .animated.fadeInLeft {
+        opacity: 1;
+    }
+}
