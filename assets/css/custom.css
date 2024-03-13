@@ -517,7 +517,7 @@ span.progress_ove_caption {
 }
 /* Fix animated opacity 0 responsive */
 @media (max-width: 768px) {
-    .fadeInRight, .fadeInLeft {
+    .animated.fadeInRight, .animated.fadeInLeft {
         opacity: 1;
     }
 }
