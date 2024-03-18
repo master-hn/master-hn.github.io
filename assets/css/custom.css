@@ -1,3 +1,10 @@
+/* Cacher du menu les pages vides */
+/* Culture */ #Hedone > div > ul > li:nth-child(4),
+/* A propos */ #Hedone > div > ul > li:nth-child(2),
+/*Stage & mémoire */ #Hedone > div > ul > li:nth-child(3) > ul > li:nth-child(3),
+/* Communauté alumni */ #Hedone > div > ul > li:nth-child(3) > ul > li:nth-child(3) {
+    display: none;
+}
 div.pre-header{
     background-color: rgb(65, 65, 65);
 }
@@ -520,4 +527,60 @@ span.progress_ove_caption {
     .animated.fadeInRight, .animated.fadeInLeft {
         opacity: 1;
     }
+}
+
+/* FLIP CARDS */
+.card-container {
+    justify-content: center;
+    align-items: center;
+}
+.flip-card {
+    background-color: transparent;
+    height: 300px;
+    perspective: 1000px;
+    align-items: center;
+}
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    border-radius: 5px;
+    box-shadow: 0px 2px 3cap rgba(0,0,0,0.2);
+}
+.flip-card:hover .flip-card-inner, .flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+}
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 5px;
+}
+.flip-card-front {
+    background-color: #fafafa;
+    color: black;
+}
+.flip-card-back {
+    background-color: #fafafa;
+    color: black;
+    transform: rotateY(180deg);
+}
+.flip-button {
+    margin-top: 20px;
+    cursor: pointer;
+    padding: 10px 20px;
+}
+h4.head-card {
+    text-transform: uppercase;
+    font-weight: 400;
+}
+.flip-card-inner p {
+    font-weight: 300;
+}
+.flip-card-back p {
+    font-size: small;
 }
