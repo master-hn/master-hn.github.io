@@ -543,6 +543,19 @@ span.progress_ove_caption {
     align-items: center;
     margin: auto;
 }
+/* Ajustements pour les tablettes */
+@media (max-width: 768px) {
+    .flip-card {
+        width: 50%; /* Affiche 2 cartes par ligne */
+    }
+}
+
+/* Ajustements pour les téléphones mobiles */
+@media (max-width: 480px) {
+    .flip-card {
+        width: 100%; /* Affiche 1 carte par ligne */
+    }
+}
 .flip-card-inner {
     position: relative;
     width: 100%;
@@ -551,12 +564,12 @@ span.progress_ove_caption {
     transition: transform 0.6s;
     transform-style: preserve-3d;
     border-radius: 5px;
-    box-shadow: 0px 2px 3cap rgba(0,0,0,0.2);
 }
 .flip-card:hover .flip-card-inner, .flip-card.flipped .flip-card-inner {
     transform: rotateY(180deg);
 }
 .flip-card-front, .flip-card-back {
+    box-shadow: 0px 4px 7px rgba(0,0,0,0.2);
     position: absolute;
     width: 100%;
     min-height: 300px; /* Assurez-vous que cela est suffisant pour le contenu le plus long */
