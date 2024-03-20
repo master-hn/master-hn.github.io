@@ -171,46 +171,52 @@
                     </div>
                 </div>
                 <div class="card-container row">
-                    <div class="flip-card col-eq col-md-6">
+                    <div class="flip-card col-eq">
                         <div class="flip-card-inner">
                           <div class="flip-card-front">
-                            <h4 class="head-card">Outiller les LLASHS</h4>
-                            <p>Innovation des méthodes scientifiques.</p>
+                            <div>
+                                <h4 class="head-card">Outiller les LLASHS</h4>
+                                <p>Innovation des méthodes scientifiques.</p>
+                            </div>
                           </div>
                           <div class="flip-card-back">
                             <p>Les <strong>Humanités Numériques</strong> contribuent aux Humanités (Lettres, Langues, Sciences humaines et sociales), notamment par le traitement automatique du langage, la constitution de corpus, le partage des données.</p>
                           </div>
                         </div>
                       </div>
-                    <div class="flip-card col-eq col-md-6">
+                    <div class="flip-card col-eq">
                         <div class="flip-card-inner">
                           <div class="flip-card-front">
-                            <h4 class="head-card">Lier les SHS au numérique</h4>
-                            <p>Les apports des LLASHS dans le numérique</p>
+                            <div>
+                                <h4 class="head-card">Lier les SHS au numérique</h4>
+                                <p>Les apports des LLASHS dans le numérique</p>
+                            </div>
                           </div>
                           <div class="flip-card-back">
                             <p>"Sans linguiste, pas de Siri et sans géographe, pas de GPS". Ce sont les mots de François Perea lors de sa conférence IDEFI à propos des <strong>Humanités Numériques</strong>. Il s'agit d'appliquer les SHS dans le numérique.</p>
                           </div>
                         </div>
                       </div>
-                      </div>
-                <div class="card-container row">
-                        <div class="flip-card col-eq col-md-6">
+                        <div class="flip-card col-eq">
                             <div class="flip-card-inner">
                               <div class="flip-card-front">
-                                <h4 class="head-card">Étude de la société dite numérique</h4>
-                                <p>Notre évolution avec le numérique.</p>
+                                <div>
+                                    <h4 class="head-card">Étude de la société dite numérique</h4>
+                                    <p>Notre évolution avec le numérique.</p>
+                                </div>
                               </div>
                               <div class="flip-card-back">
                                 <p>L'étude des phénomènes sociaux et humains dans une société où le numérique prend une place et façonne la société et les comportements. Cela questionne à la fois les conséquences du numérique et les usages transformés de notre société par le numérique.</p>
                               </div>
                             </div>
                           </div>
-                        <div class="flip-card col-eq col-md-6">
+                        <div class="flip-card col-eq">
                             <div class="flip-card-inner">
                               <div class="flip-card-front">
-                                <h4 class="head-card">Épistémologie face au numérique</h4>
-                                <p>Meta-réflexion des pratiques numériques scientifiques et enseignantes.</p>
+                                <div>
+                                    <h4 class="head-card">Épistémologie face au numérique</h4>
+                                    <p>Meta-réflexion des pratiques numériques scientifiques et enseignantes.</p>
+                                </div>
                               </div>
                               <div class="flip-card-back">
                                 <p>L'introduction des outils numériques dans la pédagogie et les méthodes scientifiques façonne et conditionne les enseignants-chercheurs. Les <strong>Humanités Numériques</strong> proposent ceci comme champs et terrain d'étude.</p>
@@ -274,6 +280,18 @@
         <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js'></script>
         <script  src="assets/js/swiper.js"></script>
         <!-- FLIP CARDS -->
+        <script>
+            window.onload = function() {
+                var cards = document.querySelectorAll('.flip-card-inner');
+                Array.prototype.forEach.call(cards, function(card) {
+                    var frontHeight = card.querySelector('.flip-card-front').offsetHeight;
+                    var backHeight = card.querySelector('.flip-card-back').offsetHeight;
+                    var maxHeight = Math.max(frontHeight, backHeight);
+                    card.style.height = maxHeight + 'px';
+                });
+            };
+
+        </script>
         <script>
             $().ready(function(){
                 $('[rel="tooltip"]').tooltip();
