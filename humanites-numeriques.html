@@ -282,15 +282,21 @@
         <!-- FLIP CARDS -->
         <script>
             window.onload = function() {
-                var cards = document.querySelectorAll('.flip-card-inner');
+                var cards = document.querySelectorAll('.flip-card');
                 Array.prototype.forEach.call(cards, function(card) {
-                    var frontHeight = card.querySelector('.flip-card-front').offsetHeight;
-                    var backHeight = card.querySelector('.flip-card-back').offsetHeight;
+                    var inner = card.querySelector('.flip-card-inner');
+                    var frontHeight = inner.querySelector('.flip-card-front').offsetHeight;
+                    var backHeight = inner.querySelector('.flip-card-back').offsetHeight;
                     var maxHeight = Math.max(frontHeight, backHeight);
+                    
+                    // Ajuste la hauteur de .flip-card-inner pour qu'elle corresponde à la plus grande des deux faces
+                    inner.style.height = maxHeight + 'px';
+                    
+                    // Optionnel: ajuste également la hauteur de .flip-card si nécessaire
+                    // Cela peut être utile si vous souhaitez que la hauteur extérieure de la carte s'ajuste également
                     card.style.height = maxHeight + 'px';
                 });
             };
-
         </script>
         <script>
             $().ready(function(){

@@ -530,32 +530,37 @@ span.progress_ove_caption {
 }
 
 /* FLIP CARDS */
+/* FLIP CARDS */
 .card-container {
     display: flex;
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne suivante */
     justify-content: center;
     align-items: center;
 }
+
 .flip-card {
     background-color: transparent;
-    width: 300px;
-    height: 300px;
+    width: calc(25% - 10px); /* Ajustement pour 4 cartes par ligne avec un peu d'espace */
+    margin: 5px; /* Espacement autour des cartes */
+    height: auto; /* Hauteur automatique pour s'adapter au contenu */
     perspective: 1000px;
     align-items: center;
-    margin: auto;
 }
+
 /* Ajustements pour les tablettes */
 @media (max-width: 768px) {
     .flip-card {
-        width: 50%; /* Affiche 2 cartes par ligne */
+        width: calc(50% - 10px); /* Ajustement pour 2 cartes par ligne */
     }
 }
 
 /* Ajustements pour les téléphones mobiles */
 @media (max-width: 480px) {
     .flip-card {
-        width: 100%; /* Affiche 1 carte par ligne */
+        width: calc(100% - 10px); /* Ajustement pour 1 carte par ligne */
     }
 }
+
 .flip-card-inner {
     position: relative;
     width: 100%;
